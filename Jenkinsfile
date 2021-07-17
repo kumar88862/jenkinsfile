@@ -3,8 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'python'
+                echo "python"
             }
         }
+    }
+    post{
+        failure{
+            echo "failed"
+        
+        }
+    
     }
 }
